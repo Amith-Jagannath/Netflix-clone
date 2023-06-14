@@ -3,9 +3,11 @@ import "./App.css";
 import Row from "./Row";
 import Banner from "./Banner";
 import requests from "./Requests";
+import Nav from "./Nav";
 function App() {
   return (
     <div className="App">
+      <Nav />
       <Banner />
 
       <Row
@@ -14,7 +16,7 @@ function App() {
         isLargeRow
       />
       <Row title="Trending Now" fetchUrl={requests.fetchTrendings} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTrendings} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
 
